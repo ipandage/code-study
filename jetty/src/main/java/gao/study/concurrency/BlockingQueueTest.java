@@ -5,6 +5,13 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * http://www.cnblogs.com/likwo/archive/2010/07/01/1769199.html
+ * 
+ *         本例介绍一个特殊的队列:BlockingQueue,如果BlockQueue是空的,从BlockingQueue取东西的操作将会被阻断进入等待状态
+ *         ,直到BlockingQueue进了东西才会被唤醒.同样,如果BlockingQueue是满的,
+ *         任何试图往里存东西的操作也会被阻断进入等待状态,直到BlockingQueue里有空间才会被唤醒继续操作.
+ */
 public class BlockingQueueTest {
 
 	/** 定义装苹果的篮子 */
