@@ -27,8 +27,9 @@ public class BlockingQueueTest {
 		public void produce() throws InterruptedException {
 
 			// put方法放入一个苹果,若basket满了,等到basket有位置
-
+			System.out.println("produce before" + basket.size());
 			basket.put("An apple");
+			System.out.println("produce after" + basket.size());
 
 		}
 
@@ -37,7 +38,7 @@ public class BlockingQueueTest {
 		public String consume() throws InterruptedException {
 
 			// take方法取出一个苹果,若basket为空,等到basket有苹果为止
-
+			System.out.println("consume before" + basket.size());
 			return basket.take();
 
 		}
