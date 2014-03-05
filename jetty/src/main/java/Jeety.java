@@ -1,3 +1,5 @@
+import java.io.File;
+
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
@@ -20,6 +22,7 @@ public class Jeety {
 		WebAppContext webapp = new WebAppContext();
 		webapp.setContextPath("/jetty");
 		webapp.setResourceBase("../jetty/src/main/webapp");
+		webapp.setTempDirectory(new File("e:/temp"));
 		
 		server.setHandler(webapp);
 		server.start();
