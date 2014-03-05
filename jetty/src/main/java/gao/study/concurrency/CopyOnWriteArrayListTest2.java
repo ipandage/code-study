@@ -6,6 +6,15 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+/**
+ * 
+ * ArrayList 是 非线程安全的， CopyOnWriteArrayList
+ * 是一个线程安全，并且在读操作时无锁的ArrayList,且适合并发访问。对于集合元素数为10000
+ * ，线程数量为100的情况下进行性能测试，随着元素数量和线程数量的增加
+ * ，CopyOnWriteArrayList在增加元素和删除元素时的性能下降非常明显，并且性能会比ArrayList低
+ * 。但在查找元素这点上随着线程数的增长，性能较ArrayList会好很多。
+ * 
+ */
 public class CopyOnWriteArrayListTest2 {
 	public static int demo(final List list, final int testCount)
 			throws InterruptedException {
@@ -39,23 +48,24 @@ public class CopyOnWriteArrayListTest2 {
 
 	public static void main(String[] args) throws InterruptedException {
 		List unsafeList = new ArrayList();
-		List safeList = new CopyOnWriteArrayList(); // Collections.synchronizedList(new ArrayList()); 
-																		
+		List safeList = new CopyOnWriteArrayList(); // Collections.synchronizedList(new
+													// ArrayList());
+
 		final int N = 100000;
 		for (int i = 0; i < 10; i++) {
 			unsafeList.clear();
 			safeList.clear();
-			
+
 			long curTime = System.nanoTime();
 			int unsafeSize = demo(unsafeList, N);
 			long duration = System.nanoTime() - curTime;
 			System.out.format("Duration: %.2f\n", duration / 1.0e9);
-			
+
 			long _curTime = System.nanoTime();
 			int safeSize = demo(safeList, N);
 			long _duration = System.nanoTime() - _curTime;
 			System.out.format("Duration: %.2f\n", _duration / 1.0e9);
-			
+
 			System.out.println("unsafe/safe: " + unsafeSize + "/" + safeSize);
 		}
 	}
