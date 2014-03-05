@@ -17,7 +17,7 @@ public class CopyOnWriteArrayListTest2 {
 			public void run() {
 				try {
 					int nextInt = rand.nextInt(2);
-					System.out.println(nextInt);
+					// System.out.println(nextInt);
 					Thread.sleep(nextInt);
 				} catch (InterruptedException e) {
 					return;
@@ -39,14 +39,23 @@ public class CopyOnWriteArrayListTest2 {
 
 	public static void main(String[] args) throws InterruptedException {
 		List unsafeList = new ArrayList();
-		List safeList = new CopyOnWriteArrayList(); // 也可以换成new
-																		// CopyToWriteArrayList
-		final int N = 10000;
+		List safeList = new CopyOnWriteArrayList(); // Collections.synchronizedList(new ArrayList()); 
+																		
+		final int N = 100000;
 		for (int i = 0; i < 10; i++) {
 			unsafeList.clear();
 			safeList.clear();
+			
+			long curTime = System.nanoTime();
 			int unsafeSize = demo(unsafeList, N);
+			long duration = System.nanoTime() - curTime;
+			System.out.format("Duration: %.2f\n", duration / 1.0e9);
+			
+			long _curTime = System.nanoTime();
 			int safeSize = demo(safeList, N);
+			long _duration = System.nanoTime() - _curTime;
+			System.out.format("Duration: %.2f\n", _duration / 1.0e9);
+			
 			System.out.println("unsafe/safe: " + unsafeSize + "/" + safeSize);
 		}
 	}
