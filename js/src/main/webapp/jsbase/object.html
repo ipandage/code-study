@@ -1,0 +1,40 @@
+<script>
+    /**
+     * 创建空对象
+     *
+     var cody = new Object(); // create an empty object with no properties
+     for (key in cody) { // confirm that cody is an empty generic object
+        if(cody.hasOwnProperty(key)) {
+            console.log(key);  // should not see any logs, because cody itself has no properties
+        }
+    }
+     */
+
+    /**
+     * 对象参数
+     *
+     // create an empty object with no properties
+     var cody1 = new Object();
+     var cody2 = new Object(undefined);
+     var cody3 = new Object(null);
+     console.log(typeof cody1, typeof cody2, typeof cody3); // logs 'object object object'
+     console.log(new Object('foo'));
+     console.log(new Object(1));
+     console.log(new Object([]));
+     console.log(new Object(function() {}));
+     console.log(new Object(true));
+     console.log(new Object(/\bt[a-z]+\b/));
+     */
+
+    /**
+     * 所有的对象继承于 Object.prototype
+     *
+     Object.prototype.foo = 'foo';
+     var myString = 'bar';
+     // logs 'foo', being found at Object.prototype.foo via prototype chain
+     console.log(myString.foo);
+     */
+
+
+
+</script>
