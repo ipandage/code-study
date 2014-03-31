@@ -20,7 +20,7 @@ public class Jetty {
 		
 		WebAppContext webapp = new WebAppContext();
 		webapp.setContextPath("/jetty");
-		webapp.setResourceBase("../jetty/src/main/webapp");
+		webapp.setResourceBase("E:/idea/code-study/jetty/src/main/webapp");
 		webapp.setTempDirectory(new File("e:/temp"));
 		
 		server.setHandler(webapp);
