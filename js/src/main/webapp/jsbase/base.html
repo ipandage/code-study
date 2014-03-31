@@ -1,8 +1,22 @@
 <script>
 
-
+    /*
+    // 当校验一个 null 值时，需要使用 === ，因为 == 不能区分null 和 undefined
     var myObject = undefined;
     console.log(typeof myObject); // logs 'object', not exactly helpful
-    console.log(myObject == null); // logs true, only for a real null value
+    console.log(myObject === null); // logs true, only for a real null value
+    */
+
+    /*
+    // undefined 出现在两种情况，第一种，声明了变量，但是没有分配值；第二种，试图访问一个变量，但是没有定义,
+    var initializedVariable; // declare variable
+    console.log(initializedVariable); // logs undefined
+    console.log(typeof initializedVariable); // confirm that JavaScript returns undefined
+
+    var foo = {};
+    console.log(foo.bar); // logs undefined, no bar property in foo object
+    console.log(typeof foo.bar); // confirm that JavaScript returns undefined
+     */
+
 
 </script>
