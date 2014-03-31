@@ -12,8 +12,6 @@ public class Jetty {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-        //test
-		// TODO Auto-generated method stub
 		Server server = new Server();
 		Connector connector = new SelectChannelConnector();
 
