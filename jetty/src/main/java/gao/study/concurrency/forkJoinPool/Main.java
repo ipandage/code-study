@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         // Create a list of products
         ProductListGenerator generator = new ProductListGenerator();
-        List<Product> products = generator.generate(10000);
+        List<Product> products = generator.generate(1000000);
         Task task = new Task(products, 0, products.size(), 0.20);
         ForkJoinPool pool = new ForkJoinPool();
         // Execute the Task

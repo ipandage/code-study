@@ -1,4 +1,4 @@
-package gao.study.concurrency.jenkov;
+package gao.study.concurrency.jenkov.BlockingQueue;
 
 import java.util.concurrent.BlockingQueue;
 
