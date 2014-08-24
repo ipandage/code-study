@@ -12,9 +12,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>study-base</module>
         <module>jetty</module>
         <module>spring</module>
+        <module>js</module>
+        <module>base</module>
     </modules>
 
     <dependencyManagement>
