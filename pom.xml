@@ -16,7 +16,6 @@
         <module>base</module>
         <module>activemq</module>
         <module>spring</module>
-        <module>nodejs</module>
     </modules>
 
     <dependencyManagement>
