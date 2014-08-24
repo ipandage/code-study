@@ -15,8 +15,7 @@
         <module>study-base</module>
         <module>study-jetty</module>
         <module>study-spring</module>
-        <module>test</module>
-        <module>jetty1</module>
+        <module>jetty</module>
     </modules>
 
     <dependencyManagement>
