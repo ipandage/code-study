@@ -13,9 +13,8 @@
 
     <modules>
         <module>study-base</module>
-        <module>study-jetty</module>
-        <module>study-spring</module>
         <module>jetty</module>
+        <module>spring</module>
     </modules>
 
     <dependencyManagement>
