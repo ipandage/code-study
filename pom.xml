@@ -13,7 +13,6 @@
 
     <modules>
         <module>jetty</module>
-        <module>js</module>
         <module>base</module>
         <module>activemq</module>
         <module>spring</module>
