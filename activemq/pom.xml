@@ -6,16 +6,10 @@
         <artifactId>study</artifactId>
         <groupId>com.study</groupId>
         <version>1.0</version>
-        <relativePath>pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nodejs</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module/>
-        <module>nodejs</module>
-    </modules>
+    <artifactId>activemq</artifactId>
 
 
 </project>
