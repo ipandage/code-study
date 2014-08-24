@@ -16,6 +16,7 @@
         <module>study-jetty</module>
         <module>study-spring</module>
         <module>test</module>
+        <module>jetty1</module>
     </modules>
 
     <dependencyManagement>
