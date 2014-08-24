@@ -1,0 +1,3 @@
+ubuntu下安装mysql
+http://cycnet.blog.51cto.com/117809/812625
+
