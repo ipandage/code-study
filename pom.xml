@@ -17,6 +17,7 @@
         <module>activemq</module>
         <module>spring</module>
         <module>zookeeper</module>
+        <module>netty</module>
     </modules>
 
     <dependencyManagement>
