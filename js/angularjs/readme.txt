@@ -1,1 +1,0 @@
-http://www.iteye.com/news/28651-AngularJS-Google-resource
