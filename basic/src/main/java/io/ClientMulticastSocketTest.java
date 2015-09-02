@@ -1,4 +1,4 @@
-package concurrency.io;
+package io;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
