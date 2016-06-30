@@ -11,8 +11,19 @@ print((num % 2) == 1) -->打印 true。 判断num是否为奇数
 print((num % 5) == 0)  -->打印 false。判断num是否能被5整数
 
 -- 关系运算符
+-- 注意：Lua 语言中“不等于”运算符的写法为：~=
 print(1 < 2)    -->打印 true
 print(1 == 2)   -->打印 false
 print(1 ~= 2)   -->打印 true
 local a, b = true, false
 print(a == b)  -->打印 false
+
+-- 字符串连接
+print("Hello " .. "World")    -->打印 Hello World
+print(0 .. 1)                 -->打印 01
+
+str1 = string.format("%s-%s","hello","world")
+print(str1)              -->打印 hello-world
+
+str2 = string.format("%d-%s-%.2f",123,"world",1.21)
+print(str2)              -->打印 123-world-1.21
