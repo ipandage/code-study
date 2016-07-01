@@ -64,3 +64,56 @@ for i, v in ipairs(t) do
         break
     end
 end
+
+-- for 控制结构
+for i = 1, 5 do
+  print(i)
+end
+
+for i = 1, 10, 2 do
+  print(i)
+end
+
+-- for 泛型
+local a = {"a", "b", "c", "d"}
+for i, v in ipairs(a) do
+  print("index:", i, " value:", v)
+end
+
+-- break，return 关键字
+-- break
+sum = 0
+i = 1
+while true do
+    sum = sum + i
+    if sum > 100 then
+        break
+    end
+    i = i + 1
+end
+print("The result is " .. i)  -->output:The result is 14
+
+-- return
+local function add(x, y)
+    return x + y
+    --print("add: I will return the result " .. (x + y))
+    --因为前面有个return，若不注释该语句，则会报错
+end
+
+local function is_positive(x)
+    if x > 0 then
+        return x .. " is positive"
+    else
+        return x .. " is non-positive"
+    end
+
+    --由于return只出现在前面显式的语句块，所以此语句不注释也不会报错
+    --，但是不会被执行，此处不会产生输出
+    print("function end!")
+end
+
+sum = add(10, 20)
+print("The sum is " .. sum)  -->output:The sum is 30
+answer = is_positive(-10)
+print(answer)                -->output:-10 is non-positive
+
