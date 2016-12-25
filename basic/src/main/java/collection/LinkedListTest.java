@@ -44,6 +44,7 @@ public class LinkedListTest {
 
 /**
  *
+ * 
  * 10w 第一位插入
  * ArrayList time is 1342 size is 100000
  * LinkedList time is 43 size is 100000
