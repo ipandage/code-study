@@ -17,5 +17,12 @@ select * from users where YEAR(adddate)<2007;
 将在每个行上进行运算，这将导致索引失效而进行全表扫描，因此我们可以改成
 select * from users where adddate<‘2007-01-01’;
 8，不使用NOT IN和操作
-NOT IN和操作都不会使用索引将进行全表扫描。NOT IN可以NOT EXISTS代替，id3则可使用id>3 or id<3来代替。
-标签: mysql索引优化面试题
+NOT IN和<>操作都不会使用索引将进行全表扫描。NOT IN可以NOT EXISTS代替，id3则可使用id>3 or id<3来代替 。
+
+索引分类
+1.普通索引
+2.唯一索引
+3.主键索引
+4.组合索引
+
+
