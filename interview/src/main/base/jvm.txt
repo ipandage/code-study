@@ -1,0 +1,3 @@
+jvm 是如何分配和回收内存
+http://www.cnblogs.com/magialmoon/p/jvm-memory-and-gc.html
+
