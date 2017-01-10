@@ -17,4 +17,12 @@ jstack
 locked 确认大批请求在临界区 等待数据库链接 ，有时需要确认是否等待相同资源，数据库连接池资源遇到了瓶颈
 4.判断引起资源瓶颈的程序来源，对症下药
 
-
+值得关注的线程状态
+死锁，Deadlock（重点关注）
+执行中，Runnable
+等待资源，Waiting on condition（重点关注）
+等待获取监视器，Waiting on monitor entry（重点关注）
+暂停，Suspended
+对象等待中，Object.wait() 或 TIMED_WAITING
+阻塞，Blocked（重点关注）
+停止，Parked
