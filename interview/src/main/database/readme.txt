@@ -56,3 +56,8 @@ MyISAM与InnoDb主要区别和应用场景
 应用场景
 1.MyISAM管理非事物表。它提供高速存储和索引，以及提供全文搜索能力。如果程序中执行大量的select操作，MyISAM是非常好的选择
 2.InnoDb用户事物处理应用程序，具有众多特性，包括ACID事物支持。如果应用中有大量的insert update操作，可以挺高多用户并发操作性能
+
+mysql 执行状态分析
+show processlist 关键列 state (info 显示完全 show full processlist )
+
+
