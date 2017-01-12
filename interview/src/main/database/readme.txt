@@ -24,6 +24,7 @@ NOT IN和<>操作都不会使用索引将进行全表扫描。NOT IN可以NOT EX
 2.唯一索引
 3.主键索引
 4.组合索引
+一个查询只能用索引的一部分，但只能是左侧索引
 
 查询慢优化
 1.使用explain
@@ -35,3 +36,23 @@ log-slow-queries=d:\mysql5\logs\mysqlslow.log
 可以用mysqlsla来分析之。也可以在mysqlreport中，有如
 DMS分别分析了select ,update,insert,delete,replace等所占的百份比
 
+explain 使用 需要关注哪几列
+id  selecttype  table  type possible_keys  key key_len  ref rows  extra
+type 本次查询表连接类型，能看到本次查询的大概效率 All是执行全表扫描效率最差
+key 选择的索引，最终选择的索引，没有索引的话效率通常很差
+key_len 索引的长度
+rows 预计扫描的记录数，越小越好
+extra 判断是否出现几种情况 Using filesort、Using temporary
+
+MyISAM与InnoDb主要区别和应用场景
+
+1.MyISAM是非事物安全型的，InnoDb是事物安全型的
+2.MyISAM锁的粒度是表级，InnoDb是行级
+3.MyISAM支持全文索引，InnoDb不支持
+3.MyISAM相对简单，效率上高于InnoDb
+3.MyISAM表是保存成文件的形式，快平台的数据转移中会省不少事
+3.InnoDb比MyISAM更安全
+
+应用场景
+1.MyISAM管理非事物表。它提供高速存储和索引，以及提供全文搜索能力。如果程序中执行大量的select操作，MyISAM是非常好的选择
+2.InnoDb用户事物处理应用程序，具有众多特性，包括ACID事物支持。如果应用中有大量的insert update操作，可以挺高多用户并发操作性能
