@@ -60,4 +60,8 @@ MyISAM与InnoDb主要区别和应用场景
 mysql 执行状态分析
 show processlist 关键列 state (info 显示完全 show full processlist )
 
+innodb存储引擎
+支持常见的两种索引B+树索引，哈希索引
+
+
 
