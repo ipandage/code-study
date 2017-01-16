@@ -1,0 +1,15 @@
+http://blog.csdn.net/chinayuan/article/details/3345559！
+只要值相同的string 不管是不是一个对象hash全部相等
+两个相等对象的equals方法一定为true，但两个hash相等的对象不一定是相等的对象
+所以hashcode相等只能保证两个对象再Hash表里的一条HASH链上，再通过equals方法才能确定是不是同一个对象
+
+Object.hashCode 代表内存地址？不能创建10000个对象可以让起hashcode相等，但是内存地址一定不一致
+
+HashMap hash冲突问题
+常见的hash冲突是指不同对象最总产生了相同的索引，索引相同的对象，再index位置存放了多个对象，
+这些值想要正确区分，就要靠key本身和hashcode识别
+
+HashMap 和 HashTable 源码学习
+https://zhuanlan.zhihu.com/p/24338517
+
+
