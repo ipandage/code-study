@@ -63,5 +63,6 @@ show processlist 关键列 state (info 显示完全 show full processlist )
 innodb存储引擎
 支持常见的两种索引B+树索引，哈希索引
 
+innodb自增主键的一些问题 todo
 
 
