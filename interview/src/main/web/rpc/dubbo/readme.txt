@@ -1,3 +1,5 @@
+http://dubbo.io/User+Guide-zh.htm
+
 dubbo 的高可用是怎么做到的?
 1.监控中心宕掉不影响使用，只会丢失部分采集数据
 2.数据库宕掉后，注册中心仍能通过缓存提供服务列表查询，但不能注册新服务
@@ -41,7 +43,8 @@ Dubbo：//service-host/com.xxx.TxxService?version=1.0.0
 和上一种的区别，需要将服务的ip和端口暴露给服务中心
 ServiceConfig解析出的url格式为：
 registry://registry-host/com.alibaba.dubbo.registry.RegistryService?export=URL.encode(“dubbo://service-host/com.xxx.TxxService?version=1.0.0”)
-基于扩展点的Adaptive机制，通过URL的“registry：//”协议头识别，调用RegistryProtocol的export方法，将export参数中的提供者URL先注册到注册中心，再重新传给Protocol扩展点进行暴露：
+基于扩展点的Adaptive机制，通过URL的“registry：//”协议头识别，调用RegistryProtocol的export方法，将export参数中的提供者URL先注册到注册中心，
+再重新传给Protocol扩展点进行暴露：
 Dubbo：//service-host/com.xxx.TxxService?version=1.0.0
 
 引用服务
