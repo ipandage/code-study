@@ -1,5 +1,0 @@
-作用域      当前类   同一package   子孙类   其他package
-public       有         有           有         有
-protected    有         有           有         无
-friendly     有         有           无         无
-private      有         无           无         无
