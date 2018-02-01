@@ -14,6 +14,7 @@ public class LinkedListTest {
     public static void main(String[] args) {
         insertArrayList();
         insertLinkList();
+        System.out.println("1");
     }
 
     static void insertLinkList() {
