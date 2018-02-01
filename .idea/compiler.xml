@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="activemq" />
+        <module name="basic" />
+        <module name="jetty" />
+        <module name="netty" />
+        <module name="spring" />
+        <module name="zookeeper" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="activemq" target="1.5" />
+      <module name="base" target="1.5" />
+      <module name="basic" target="1.5" />
+      <module name="jetty" target="1.5" />
+      <module name="netty" target="1.5" />
+      <module name="spring" target="1.5" />
+      <module name="study" target="1.5" />
+      <module name="zookeeper" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

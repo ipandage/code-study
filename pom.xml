@@ -13,11 +13,11 @@
 
     <modules>
         <module>jetty</module>
-        <module>base</module>
         <module>activemq</module>
         <module>spring</module>
         <module>zookeeper</module>
         <module>netty</module>
+        <module>basic</module>
     </modules>
 
     <dependencyManagement>
