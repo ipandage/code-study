@@ -1,6 +1,5 @@
 package collection;
 
-import util.Timer;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
